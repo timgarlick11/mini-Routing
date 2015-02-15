@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='miniRouting'>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Mini Route Project</title>
+</head>
+<body>
+
+ <div class="menu">
+      <ul>
+        <li><a href="#/"> Home </a></li>
+        <li>
+          Products
+          <ul>
+            <li><a href="#/products/shoes">Shoes</a></li> <!-- the hash is basically telling them not to send anything to the server -->
+            <li><a href="#/products/socks">Socks</a></li>
+          </ul>
+        </li>
+        <li><a href="#/settings"> Settings </a></li>
+      </ul>
+    </div>
+    <div class="view-container">
+      <ng-view></ng-view>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular-route.js'></script>
+<script src="app/app.js"></script>
+<script src="home/homeCtrl.js"></script>
+<script src="Products/ProductsCtrl.js"></script>
+<script src="Products/ProductsService.js"></script>
+<script src="Settings/SettingsCtrl.js"></script>
+</body>
+</html>
